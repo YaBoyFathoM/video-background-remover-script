@@ -1,7 +1,7 @@
 
 # video Background removal script
 
-<iframe src="https://drive.google.com/file/d/1_CWoDXQ9ginW4y0-Tq-kW76xg6ginsOC/preview" width="640" height="480" allow="autoplay"></iframe>
+![Description of GIF](https://static.wixstatic.com/media/cef1ec_54a56e778ebe48ceb892641ec060f808~mv2.gif)
 
 This Python script uses OpenCV and the rembg library to remove the background from a video. It processes each frame of the video, removes the background, and then reassembles the video with the original audio.
 
