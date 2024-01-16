@@ -612,7 +612,7 @@ class ISNetDIS(nn.Module):
 
         return [F.sigmoid(d1), F.sigmoid(d2), F.sigmoid(d3), F.sigmoid(d4), F.sigmoid(d5), F.sigmoid(d6)],[hx1d,hx2d,hx3d,hx4d,hx5d,hx6]
 
-def remove_background(input_video,output_folder='output'):
+def remove_background(input_video,model_path = 'isnet-general-use.pth', output_folder='output'):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
     video = cv2.VideoCapture(input_video)
@@ -623,7 +623,6 @@ def remove_background(input_video,output_folder='output'):
     frame_width = int(video.get(cv2.CAP_PROP_FRAME_WIDTH))
     frame_list = []
     input_size=(frame_width, frame_height)
-    model_path='/home/cam/Desktop/Tayloreditor/isnet/isnet-general-use.pth'
     net=ISNetDIS()
     net.load_state_dict(torch.load(model_path))
     net=net.cuda()
